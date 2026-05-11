@@ -29,8 +29,8 @@ if (!CHECK_ONLY) {
   if (!fs.existsSync('dist')) fs.mkdirSync('dist');
   const imgSrc = path.join('.', 'images');
   const imgDst = path.join('dist', 'images');
-  if (fs.existsSync(imgSrc) && !fs.existsSync(imgDst)) {
-    fs.mkdirSync(imgDst);
+  if (fs.existsSync(imgSrc)) {
+    if (!fs.existsSync(imgDst)) fs.mkdirSync(imgDst);
     for (const img of fs.readdirSync(imgSrc)) {
       fs.copyFileSync(path.join(imgSrc, img), path.join(imgDst, img));
     }
