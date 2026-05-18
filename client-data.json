@@ -99,9 +99,9 @@
   "REVIEWER 10 DATE":     "1 year ago",
   "REVIEWER 10 TEXT":     "\"I started as a complete beginner as an adult and everyone made me feel so welcome. The curriculum is well-structured and I&#x2019;ve learned more in 3 months than I expected.\"",
 
-  "TRIAL_WEBHOOK_URL":         "",
-  "STARTER_KIT_WEBHOOK_URL":   "",
-  "QUIZ_WEBHOOK_URL":          "",
-  "FINAL_CTA_WEBHOOK_URL":     "",
-  "BOOKING_CALENDAR_URL":      ""
+  "TRIAL_WEBHOOK_URL":         "https://services.leadconnectorhq.com/hooks/WKk1TERXTmvZLXyqaUie/webhook-trigger/4f3ba943-f86f-4362-8e18-d707a1e2f357",
+  "STARTER_KIT_WEBHOOK_URL":   "https://services.leadconnectorhq.com/hooks/WKk1TERXTmvZLXyqaUie/webhook-trigger/4f3ba943-f86f-4362-8e18-d707a1e2f357",
+  "QUIZ_WEBHOOK_URL":          "https://services.leadconnectorhq.com/hooks/WKk1TERXTmvZLXyqaUie/webhook-trigger/4f3ba943-f86f-4362-8e18-d707a1e2f357",
+  "FINAL_CTA_WEBHOOK_URL":     "https://services.leadconnectorhq.com/hooks/WKk1TERXTmvZLXyqaUie/webhook-trigger/4f3ba943-f86f-4362-8e18-d707a1e2f357",
+  "BOOKING_CALENDAR_URL":      "https://api.leadconnectorhq.com/widget/group/nc2OauawmY19YvifUazx"
 }

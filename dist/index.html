@@ -1291,6 +1291,7 @@
     <!-- SWAP: Update the form action to a real webhook URL below -->
     <div class="final-form">
       <form id="form-final" onsubmit="handleFinalForm(event)">
+        <input type="hidden" name="lead_source" value="trial">
         <div class="form-row">
           <div class="form-group">
             <input type="text" name="firstName" placeholder="First Name" required autocomplete="given-name">
@@ -1423,7 +1424,7 @@
 
 <!-- ============================================================
      MODAL: BOOK FREE TRIAL
-     SWAP webhook: replace [TRIAL_WEBHOOK_URL] in JS below
+     SWAP webhook: replace https://services.leadconnectorhq.com/hooks/WKk1TERXTmvZLXyqaUie/webhook-trigger/4f3ba943-f86f-4362-8e18-d707a1e2f357 in JS below
 ============================================================ -->
 <div class="modal-overlay" id="modal-trial" role="dialog" aria-modal="true" aria-labelledby="title-trial" onclick="closeOnOverlay(event,'modal-trial')">
   <div class="modal-box">
@@ -1433,7 +1434,8 @@
       <h2 class="modal-title" id="title-trial">Book Your Free Intro Session</h2>
       <p class="modal-sub">No commitment. No experience needed. Come try us free.</p>
 
-      <form class="modal-form" id="form-trial" onsubmit="submitModal(event,'modal-trial','[TRIAL_WEBHOOK_URL]')">
+      <form class="modal-form" id="form-trial" onsubmit="submitModal(event,'modal-trial','https://services.leadconnectorhq.com/hooks/WKk1TERXTmvZLXyqaUie/webhook-trigger/4f3ba943-f86f-4362-8e18-d707a1e2f357')">
+        <input type="hidden" name="lead_source" value="trial">
         <div class="field">
           <label for="tr-name">Name</label>
           <input id="tr-name" type="text" name="name" placeholder="Your full name" required autocomplete="name">
@@ -1475,7 +1477,7 @@
 
 <!-- ============================================================
      MODAL: DOWNLOAD STARTER KIT / PRICING
-     SWAP webhook: replace [STARTER_KIT_WEBHOOK_URL] in JS below
+     SWAP webhook: replace https://services.leadconnectorhq.com/hooks/WKk1TERXTmvZLXyqaUie/webhook-trigger/4f3ba943-f86f-4362-8e18-d707a1e2f357 in JS below
 ============================================================ -->
 <div class="modal-overlay" id="modal-kit" role="dialog" aria-modal="true" aria-labelledby="title-kit" onclick="closeOnOverlay(event,'modal-kit')">
   <div class="modal-box">
@@ -1485,7 +1487,8 @@
       <h2 class="modal-title" id="title-kit">Looking For Our Pricing?</h2>
       <p class="modal-sub">Fill out the form below and one of our coaches will send you our pricing, class schedule, and EXCLUSIVE promo information for our classes.</p>
 
-      <form class="modal-form" id="form-kit" onsubmit="submitModal(event,'modal-kit','[STARTER_KIT_WEBHOOK_URL]')">
+      <form class="modal-form" id="form-kit" onsubmit="submitModal(event,'modal-kit','https://services.leadconnectorhq.com/hooks/WKk1TERXTmvZLXyqaUie/webhook-trigger/4f3ba943-f86f-4362-8e18-d707a1e2f357')">
+        <input type="hidden" name="lead_source" value="starter_kit">
         <div class="field">
           <label for="kit-name">Name</label>
           <input id="kit-name" type="text" name="name" placeholder="Your full name" required autocomplete="name">
@@ -1527,7 +1530,7 @@
 
 <!-- ============================================================
      MODAL: QUIZ POPUP (fires after 60 s)
-     SWAP webhook: replace [QUIZ_WEBHOOK_URL] in JS below
+     SWAP webhook: replace https://services.leadconnectorhq.com/hooks/WKk1TERXTmvZLXyqaUie/webhook-trigger/4f3ba943-f86f-4362-8e18-d707a1e2f357 in JS below
      Steps: 1 → 2a/2b → 3a/3b → 4 → success
 ============================================================ -->
 <div class="modal-overlay" id="modal-quiz" role="dialog" aria-modal="true" aria-labelledby="title-quiz" onclick="closeOnOverlay(event,'modal-quiz')">
@@ -1617,7 +1620,8 @@
       <div class="quiz-progress"><div class="quiz-bar" style="width:100%"></div></div>
       <h2 class="modal-title">Almost There!</h2>
       <p class="modal-sub">We found the perfect program for you. Enter your info and we'll send your personalized recommendation.</p>
-      <form class="modal-form" id="form-quiz" onsubmit="submitModal(event,'modal-quiz','[QUIZ_WEBHOOK_URL]')">
+      <form class="modal-form" id="form-quiz" onsubmit="submitModal(event,'modal-quiz','https://services.leadconnectorhq.com/hooks/WKk1TERXTmvZLXyqaUie/webhook-trigger/4f3ba943-f86f-4362-8e18-d707a1e2f357')">
+        <input type="hidden" name="lead_source" value="quiz">
         <input type="hidden" name="quizAnswers" id="quiz-answers">
         <div class="field">
           <label for="qz-name">Name</label>
@@ -1803,7 +1807,7 @@
         });
         document.getElementById('qz-success').classList.add('active');
       } else if (modalId === 'modal-trial') {
-        window.location.href = '[BOOKING_CALENDAR_URL]';
+        window.location.href = 'https://api.leadconnectorhq.com/widget/group/nc2OauawmY19YvifUazx';
       } else {
         var body    = document.getElementById(modalId + '-body');
         var success = document.getElementById(modalId + '-success');
@@ -1824,7 +1828,7 @@
     btn.disabled    = true;
 
     // SWAP: replace with real webhook URL
-    var url = '[TRIAL_WEBHOOK_URL]';
+    var url = 'https://services.leadconnectorhq.com/hooks/WKk1TERXTmvZLXyqaUie/webhook-trigger/4f3ba943-f86f-4362-8e18-d707a1e2f357';
     if (url.charAt(0) !== '[') {
       fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }).catch(function () {});
     }
